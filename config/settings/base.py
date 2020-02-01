@@ -43,7 +43,14 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///nomadgram")
+   # "default": env.db("DATABASE_URL", default="postgres:///nomadgram")
+     "default": {
+         "ENGINE" : "django.db.backends.mysql",
+         "NAME" : "nomadgram",
+         "USER" : "root",
+         "HOST" : "localhost",
+         "PORT" : "3306"
+     }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 

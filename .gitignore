@@ -283,4 +283,5 @@ nomadgram/media/
 
 .pytest_cache/
 
-
+## 셋팅 관련
+config/settings/
